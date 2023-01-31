@@ -78,7 +78,7 @@ public:
         {
             lastIterationPlayer = GameTime::GetUptime() + Seconds(sConfigMgr->GetOption<uint32>("Anticheat.SaveReportsTime", 60));
 
-            LOG_INFO("module", "Saving reports for {} players.", sWorld->GetPlayerCount());
+//            LOG_INFO("module", "Saving reports for {} players.", sWorld->GetPlayerCount());
 
             for (SessionMap::const_iterator itr = sWorld->GetAllSessions().begin(); itr != sWorld->GetAllSessions().end(); ++itr)
                 if (Player* plr = itr->second->GetPlayer())
