@@ -1644,7 +1644,7 @@ void AnticheatMgr::BuildReport(Player* player, uint16 reportType)
         data << str;
         sWorld->SendGlobalGMMessage(&data);
 
-        player->GetSession()->KickPlayer(true);
+        player->GetSession()->KickPlayer();
         if (sConfigMgr->GetOption<bool>("Anticheat.AnnounceKick", true))
         {
             std::string plr = player->GetName();
